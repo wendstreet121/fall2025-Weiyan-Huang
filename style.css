@@ -5,6 +5,7 @@ html {
   box-sizing: inherit;
 }
 
+
 /* ==== Base Styles ==== */
 body {
   display: grid;
@@ -34,7 +35,7 @@ body {
 .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   gap: 20px;
 }
 
@@ -42,8 +43,8 @@ body {
   flex: 1;
   border-radius: 6px;
   border: 1px solid #ccc;
-  text-align: center;
-  padding: 40px;
+  text-align: left;
+  padding: 20px;
 }
 
 /* logo or nav box */
@@ -55,16 +56,8 @@ body {
 /* ==== Main Content (Grid) ==== */
 main {
   display: grid;
-  gap: 20px;
-}
-
-/* ==== Button Section (Flexbox inside Grid) ==== */
-.bottom {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
 }
 
 /* ==== Left column of buttons (Flex column) ==== */
@@ -86,12 +79,13 @@ main {
 }
 
 .side-column button:hover {
-  background: #ccc;
+  background: #5e5c5c;
+  color: rgb(255, 255, 255);
 }
 
 /* ==== Setting Panel (Grid + Flex) ==== */
 .setting.panel {
-  display: flex;
+  display: grid;
   height: 210px;
   grid-template-rows: auto 1fr;
   gap: 20px;
@@ -102,6 +96,14 @@ main {
 }
 
 /* top buttons inside panel (Flex) */
+.setting.panel{
+  display: none;
+}
+
+.active.setting.p{
+  display:block;
+}
+
 .setting.panel > button {
   display: flex;
   justify-content: center;
@@ -114,7 +116,7 @@ main {
 .setting.panel {
   flex: 1; /* take remaining space beside side-column */
   min-width: 400px;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .setting.panel > button {
@@ -128,11 +130,12 @@ main {
 
 /* ==== Character Gallery (Grid Row with Flex items) ==== */
 .character-gallery {
-  display: grid;
+  min-width: 100px;
+  max-width: 170px;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  background: #fff;
+  gap: 5px;
+  background: #ffffff;
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
@@ -159,5 +162,5 @@ footer {
   color: black;
   text-align: center;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 5px;
 }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <title>Document</title>
 </head>
 <body class="home">
@@ -20,33 +21,35 @@
 
   <main>
 
-      <section class="bottom">
+      <section>
       
-        <div class="box large wide">
+        <div>
           <div class="side-column">
-            <a href="start.html"><button class="" type="button">start</button></a>
-            <li class="box small"><button class="" type="button">resume</button></li>
-            <li class="box small"><button class="" type="button">setting</button></li>
-            <a href="about.html"><button class="" type="button">about</button></a>
+            <a href="start.html"><button>start</button></a>
+            <li><button>resume</button></li>
+            <li data-tab-target="#setting"><button>setting</button></li>
+            <a href="about.html"><button>about</button></a>
           </div>
           <div class="setting panel">
-            <div>
-              <button class="" type="button">sound</button>
-              <button class="" type="button">screen</button>
-              <button class="" type="button">characters</button>
-            </div>
+            <div id="setting" data-tab-content class="active">
+              <ul>
+                <li>sound</li>
+                <li>screen</li>
+                <li>character</li>
+              </ul>
 
-            <div class="character-gallery">
-              <img src="images/sparrow-2025-10-08 125734.png" alt="parlo-the sparrow"/>
-              <li><button class="" type="button">select</button></li>
-            </div>
-            <div class="character-gallery">
-              <img src="images/bird.png" alt="starling"/>
-              <li><button class="" type="button">select</button></li>
-            </div>
-            <div class="character-gallery">
-              <img src="images/pigeon.png" alt="coco- the pigeon"/>
-              <li><button class="" type="button">select</button></li>
+              <div class="character-gallery">
+                <img src="images/sparrow-2025-10-08 125734.png" alt="parlo-the sparrow"/>
+              </div>
+
+              <div class="character-gallery">
+                <img src="images/bird.png" alt="starling"/>
+              </div>
+
+              <div class="character-gallery">
+                <img src="images/pigeon.png" alt="coco- the pigeon"/>
+              </div>
+            
             </div>
           </div>
         </div>
