@@ -2,65 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <title>Document</title>
+  <title>tabs</title>
 </head>
-<body class="home">
-  
-  <header class="top"> 
-      <h1 class="box large">Poopy</h1>
-      <nav class="box large">
-      <img src="images/bird.png" scr="" alt="bird logo"/>
-      </nav>
-       <p>
-        enjoy every poop.
-      </p>
+<body>
+  <header>
+    <h1>Poopy</h1>
+    <img src="images/bird.png" alt="poopy">
   </header>
 
   <main>
+    <ul class="side-column">
+      <a href="start.html"><button>Start</button></a>
+      <a href="collectibles.html"><button> collectibles</button></a> 
+      <li data-tab-target="#setting"><button> Setting</button></li>
+      <li data-tab-target="#about"><button>About</button></li>
+    </ul>
 
-      <section>
-      
-        <div>
-          <div class="side-column">
-            <a href="start.html"><button>start</button></a>
-            <li><button>resume</button></li>
-            <li data-tab-target="#setting"><button>setting</button></li>
-            <a href="about.html"><button>about</button></a>
-          </div>
-          <div class="setting panel">
-            <div id="setting" data-tab-content class="active">
-              <ul>
-                <li>sound</li>
-                <li>screen</li>
-                <li>character</li>
-              </ul>
-
-              <div class="character-gallery">
-                <img src="images/sparrow-2025-10-08 125734.png" alt="parlo-the sparrow"/>
-              </div>
-
-              <div class="character-gallery">
-                <img src="images/bird.png" alt="starling"/>
-              </div>
-
-              <div class="character-gallery">
-                <img src="images/pigeon.png" alt="coco- the pigeon"/>
-              </div>
-            
-            </div>
-          </div>
+    <div class="data-tab-content">
+      <div id="start" data-tab-content>
+        <h2>selecting level</h2>
+        <p>poop mission on different area</p>
+      </div>
+      <div id="resume" data-tab-content>
+          <h2>resume</h2>
+          <p>where did you left last time</p>
+      </div>
+      <div id="setting" data-tab-content>
+        <ul>
+          <li><button>sound</button></li>
+          <li><button>style</button></li>
+          <li><button>characters</button></li>
+        </ul>
+        
+        <div id="sound">
+          <p>place holder for the adjusting panel</p>
         </div>
-
-      </section>
-
+        <div id="style">
+          <p>place holder for color changes options</p>
+        </div>
+        <div class="character" id="characters"> 
+          <img src="images/sparrow-2025-10-08 125734.png" alt="sparrow">
+          <img src="images/bird.png" alt="bird">
+          <img src="images/pigeon.png" alt="pigeon">
+          
+        </div>
+      </div>
+      </div>
+      <div id="about" data-tab-content>
+          <h2>about poopy</h2>
+          <p>Poopy is a fun and engaging game where players take on the role of a bird navigating through various challenges. The goal is to enjoy every poop while exploring different levels and characters. Developed with love for bird enthusiasts and gamers alike!</p>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>place holder</p>
+
+    <p>place-holder</p>
+
   </footer>
-    
+
 </body>
 </html>

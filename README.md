@@ -7,3 +7,5 @@ home page, start page(for selecting levels), each level of the game(still thinki
 user could access each page by clicking buttons assign to them.
 
 26/10/2025 the start.html and about.html was added to the project.
+
+02/11/2025 simplelify the html , CSS and add the java script. new collectible section -> for items hidden in the game.

@@ -5,67 +5,39 @@ html {
   box-sizing: inherit;
 }
 
-
-/* ==== Base Styles ==== */
-body {
-  display: grid;
-  place-items: center;
-  padding: 40px;
-  font-family: sans-serif;
-  background-color: #f9f9f9;
+[data-tab-content]{
+  display: none;
 }
 
-.home {
-  background: url(images/background.png);
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
+.active[data-tab-content]{
+  display: block;
 }
 
-/* ==== Page Layout ==== */
-.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 20px;
-  width: 800px;
-  max-width: 90vw;
+.body{
+  padding: 0;
+  margin: 0;
 }
 
-/* ==== Header (uses Flexbox) ==== */
-.top {
+.body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.main {
   display: flex;
-  justify-content: space-between;
-  align-items: left;
+
   gap: 20px;
 }
 
-.top h1 {
-  flex: 1;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
-  padding: 20px;
-}
-
-/* logo or nav box */
-.top nav img {
-  width: 100px;
-  height: auto;
-}
-
-/* ==== Main Content (Grid) ==== */
-main {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 30px;
-}
-
-/* ==== Left column of buttons (Flex column) ==== */
+/* ==== Side Column (Navigation) ==== */
 .side-column {
-  display: flex;
+   display: flex;
   flex-direction: column;
   gap: 10px;
+  list-style-type: none;
 }
+
 
 .side-column button {
   width: 180px;
@@ -83,58 +55,16 @@ main {
   color: rgb(255, 255, 255);
 }
 
-/* ==== Setting Panel (Grid + Flex) ==== */
-.setting.panel {
-  display: grid;
-  height: 210px;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
-  background: #eee;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
 
-/* top buttons inside panel (Flex) */
-.setting.panel{
-  display: none;
-}
+/* ==== Character Gallery (Grid Row with Flex items) */
 
-.active.setting.p{
-  display:block;
-}
-
-.setting.panel > button {
+.character {
   display: flex;
+  /*min-width: 100px;
+  max-width: 170px;*/
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.setting.panel {
-  flex: 1; /* take remaining space beside side-column */
-  min-width: 400px;
-  max-width: 900px;
-}
-
-.setting.panel > button {
-  width: 120px;
-  padding: 8px;
-  border-radius: 6px;
-  background: #ddd;
-  border: 1px solid #bbb;
-  cursor: pointer;
-}
-
-/* ==== Character Gallery (Grid Row with Flex items) ==== */
-.character-gallery {
-  min-width: 100px;
-  max-width: 170px;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  gap: 40px;
   background: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -142,7 +72,7 @@ main {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.character-gallery img {
+.character img {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -152,7 +82,7 @@ main {
   transition: transform 0.2s ease;
 }
 
-.character-gallery img:hover {
+.character img:hover {
   transform: scale(1.1);
 }
 
